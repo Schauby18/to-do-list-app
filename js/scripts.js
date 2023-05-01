@@ -14,12 +14,10 @@ function newItem(){
     
      //2. Crossing out an item from the list of items:
        function crossOut() {
-             li.toggleClass("strike");
+             li.toggleClass('.strike');
          }
 
-         li.on("dblclick", function crossOut() {
-            li.toggleClass("strike");
-         });
+         li.on("dblclick", crossOut);
     
      //3(i). Adding the delete button "X": 
        let crossOutButton = $('<crossOutButton></crossOutButton');
@@ -28,7 +26,7 @@ function newItem(){
     
         crossOutButton.on('click', deleteListItem);
          function deleteListItem(){
-             li.addClass("delete")
+             li.addClass('delete')
          }
 
      // 4. Reordering the items: 
