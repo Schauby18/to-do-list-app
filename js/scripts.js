@@ -14,9 +14,9 @@ function newItem(){
       li.toggleClass('strike');
   }
 
-  li.on('dblclick', crossOut);
+  li.on('dblclick', function crossOut() {;
       li.toggleClass('strike');
-
+  });
   let crossOutButton = $('<crossOutButton>X</crossOutButton>')
   li.append(crossOutButton);
 
